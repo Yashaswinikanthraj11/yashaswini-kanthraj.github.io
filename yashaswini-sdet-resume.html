@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashaswini Kanthraj - Senior Software Engineer in Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold gradient-text">Yashaswini Kanthraj</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Experience</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Skills</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-purple-50">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-purple-50">About</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:bg-purple-50">Experience</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:bg-purple-50">Skills</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-purple-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-20 px-4 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="flex-1 fade-in-up">
+                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                        Hi, I'm <span class="gradient-text">Yashaswini Kanthraj</span>
+                    </h2>
+                    <p class="text-2xl text-gray-600 mb-6">Senior Software Engineer in Test</p>
+                    <p class="text-lg text-gray-500 mb-8 max-w-2xl">
+                        Dynamic software engineer with over 10 years of experience in automation, system design and operational stability. 
+                        Adept at designing robust testing frameworks, optimizing CI/CD pipelines and driving process improvements.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:shadow-xl transition-all">
+                            Get In Touch
+                        </a>
+                        <a href="Yashaswini_Kanthraj_Resume.pdf" download class="px-8 py-3 border-2 border-purple-600 text-purple-600 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-all">
+                            Download Resume
+                        </a>
+                    </div>
+                    <div class="flex gap-4 mt-8">
+                        <a href="https://www.linkedin.com/in/yashaswini-kanthraj-52a35769/" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-xl transition-all hover:scale-110">
+                            <i class="fab fa-linkedin-in text-blue-600 text-xl"></i>
+                        </a>
+                        <a href="/cdn-cgi/l/email-protection#275e46544f4654504e494e4c4649534f55464d67404a464e4b0944484a" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-xl transition-all hover:scale-110">
+                            <i class="fas fa-envelope text-red-500 text-xl"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <div class="w-80 h-80 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full shadow-2xl flex items-center justify-center">
+                        <i class="fas fa-user text-white text-9xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">About Me</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Professional Summary</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Dynamic software engineer with over 10 years of experience in automation, 
+                        system design and operational stability. Recognized for mentoring team members, driving 
+                        process improvements and delivering high-quality software solutions.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Expertise in designing, implementing, and maintaining robust testing frameworks, optimizing 
+                        CI/CD pipelines, and automating workflows across diverse technology stacks.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Proven track record in leading automation strategies, reducing deployment times, and 
+                        strengthening security and resiliency in software development through best practices.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Currently expanding expertise in Artificial Intelligence through continuous learning and hands-on courses, 
+                        with keen interest in applying AI technologies to enhance software quality and automation.
+                    </p>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold mb-4 text-gray-800">Education</h4>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h5 class="font-bold text-gray-800">Bachelor of Engineering</h5>
+                            <p class="text-purple-600 font-medium">Information Science and Technology</p>
+                            <p class="text-gray-600">The National Institute of Engineering</p>
+                            <p class="text-gray-500 text-sm">Jul 2010 - May 2014 | Mysore, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Certifications & Training</h3>
+                    <div class="space-y-4 mb-8">
+                        <div class="bg-gradient-to-r from-orange-50 to-yellow-50 p-4 rounded-lg border-l-4 border-orange-500">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-certificate text-orange-500 text-xl mt-1"></i>
+                                <div>
+                                    <h5 class="font-bold text-gray-800">AWS Certified Solutions Architect – Associate</h5>
+                                    <p class="text-gray-600 text-sm">AWS hands-on training covering core services with strong foundation in cloud architecture and security</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-certificate text-blue-500 text-xl mt-1"></i>
+                                <div>
+                                    <h5 class="font-bold text-gray-800">Microsoft Azure Fundamentals</h5>
+                                    <p class="text-gray-600 text-sm">Certification preparation course on LinkedIn</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-brain text-purple-500 text-xl mt-1"></i>
+                                <div>
+                                    <h5 class="font-bold text-gray-800">Generative AI Mastermind</h5>
+                                    <p class="text-gray-600 text-sm">Live session by Outskill</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Patent
+                        </h4>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-bold text-gray-800 mb-2">Multimedia Searching</h5>
+                            <p class="text-gray-600 text-sm mb-3">
+                                Retrieve and access multimedia files based on user searches. For example, in a video, 
+                                return specific time segments that correspond to searched keywords.
+                            </p>
+                            <a href="https://www.freepatentsonline.com/y2017/0046339.html" target="_blank" class="text-purple-600 hover:text-purple-800 text-sm font-medium inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                View Patent
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Technical Skills</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Programming</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Java</span>
+                        <span class="skill-badge px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+                    </div>
+                </div>
+                
+                <!-- Testing -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-vial text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Testing</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Manual Testing</span>
+                        <span class="skill-badge px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">UI Automation</span>
+                        <span class="skill-badge px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">API Testing</span>
+                        <span class="skill-badge px-3 py-1 bg-lime-100 text-lime-700 rounded-full text-sm font-medium">JMeter</span>
+                        <span class="skill-badge px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Selenium</span>
+                        <span class="skill-badge px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">Cucumber</span>
+                        <span class="skill-badge px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">TestNG</span>
+                    </div>
+                </div>
+                
+                <!-- Database -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-database text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Database</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">MySQL</span>
+                        <span class="skill-badge px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <!-- CI/CD & DevOps -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-infinity text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">CI/CD & DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium">Jenkins</span>
+                        <span class="skill-badge px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">Ansible</span>
+                        <span class="skill-badge px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Grafana</span>
+                        <span class="skill-badge px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-medium">OpenSearch</span>
+                        <span class="skill-badge px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Docker</span>
+                    </div>
+                </div>
+                
+                <!-- Cloud -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                    <div class="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cloud text-sky-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Cloud Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">AWS</span>
+                        <span class="skill-badge px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Microsoft Azure</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Methodologies -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-pink-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Tools & Methodologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">HP ALM</span>
+                        <span class="skill-badge px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">QTest</span>
+                        <span class="skill-badge px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Zephyr</span>
+                        <span class="skill-badge px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">JIRA</span>
+                        <span class="skill-badge px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Scrum</span>
+                        <span class="skill-badge px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">Kanban</span>
+                    </div>
+                </div>
+                
+                <!-- Scripting & OS -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-terminal text-slate-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Scripting & OS</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">Linux</span>
+                        <span class="skill-badge px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Shell Scripting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Professional Experience</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"></div>
+            
+            <div class="max-w-5xl mx-auto">
+                <!-- Experience Item 1 - Autodesk -->
+                <div class="relative pl-8 pb-12 border-l-2 border-purple-200">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-purple-600 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Senior Software Engineer in Test</h3>
+                            <span class="text-purple-600 font-semibold">Feb 2023 - June 2024</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-3">Autodesk | Singapore</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Led system design and automation strategies as solution lead ensuring high operational stability
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Automated infrastructure provisioning using Ansible and Python, reducing manual efforts
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Developed and maintained Jenkins CI/CD pipelines, reducing deployment time by 40%
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Designed system to analyze build failures using BFA plugin, AWS Redshift, OpenSearch, and Grafana dashboards
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Managed deployment and maintenance of containerized applications using Docker
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Transitioned team from Kanban to Scrum, acting as Scrum Master to improve sprint efficiency
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Worked on migration of on-prem infrastructure to Microsoft Azure
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Mentored junior team members fostering technical growth and best practices
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 2 - Equinix -->
+                <div class="relative pl-8 pb-12 border-l-2 border-purple-200">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-purple-600 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Software Engineer in Test</h3>
+                            <span class="text-purple-600 font-semibold">Jan 2022 - Feb 2023</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-3">Equinix | Singapore</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Designed, developed and maintained API automated test suites using Cucumber and Java
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Conducted performance testing using JMeter ensuring application scalability
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Executed manual API testing using Postman and managed test cases with Zephyr
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Developed and maintained UI automation frameworks using Selenium and Java
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Collaborated with cross-functional teams to ensure high quality feature delivery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 3 - VMware -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-purple-600 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover-lift">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Member of Technical Staff III</h3>
+                            <span class="text-purple-600 font-semibold">Jul 2014 - Oct 2021</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-3">VMware | Bengaluru, India</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Experienced in using TestNG for ETL and data analytics testing ensuring data accuracy and integrity
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Project Origami: Built internal tool with Java to automate resource provisioning for test environments
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Automated VM creation and build deployment using PowerShell and Python with PowerCLI
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Resolved customer escalations by debugging and troubleshooting complex issues
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Conducted API and data automation testing using Java and TestNG
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Conducted load testing using JMeter to reproduce customer issues
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
+                                Worked on manual testing with mobile and desktop applications across various operating systems
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Get In Touch</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"></div>
+            
+            <div class="flex justify-center mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-md hover-lift max-w-sm w-full">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-center">Email</h3>
+                    <p class="text-gray-600 text-center text-sm break-all"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94edf5e7fcf5e7e3fdfafdfff5fae0fce6f5fed4f3f9f5fdf8baf7fbf9">[email&#160;protected]</a></p>
+                </div>
+            </div>
+            
+            <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg" style="display: none;">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Name</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600" placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Subject</label>
+                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600" placeholder="Subject">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                    <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600" placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-xl transition-all">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Yashaswini Kanthraj</h3>
+                    <p class="text-gray-400">Senior Software Engineer in Test</p>
+                    <p class="text-gray-400 text-sm mt-2">Specializing in automation, CI/CD, and quality engineering</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-purple-400">Home</a></li>
+                        <li><a href="#about" class="hover:text-purple-400">About</a></li>
+                        <li><a href="#experience" class="hover:text-purple-400">Experience</a></li>
+                        <li><a href="#skills" class="hover:text-purple-400">Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Yashaswini Kanthraj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form. In a production web
